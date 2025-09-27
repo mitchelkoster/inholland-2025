@@ -61,7 +61,6 @@ The cipher text has been encoded with a _character substition_, to solve this cr
 - Writing to a file
 - Error handling vs exceptions
 - The "if err != nil" idiom
-- Panic & Recover
 
 ### Practice
 - Handle user input
@@ -82,9 +81,10 @@ Get a good grasp on more advanced data structures and use this to _read webserve
 
 ### Practice
  - _Read_ the `file` from disk
- - _Parse_ the log into a data model (`struct`)
+ - _Parse_ the log data into a list of models
 
 ## 0x05 - Core Computing Concepts
+
 ### Theory
 - Computer Architecture: Stack & Heap
 - Pointers in Golang
@@ -94,15 +94,39 @@ Get a good grasp on more advanced data structures and use this to _read webserve
 
 ### Practice
 To really show the difference between `pass-by-value` and `pass-by-reference` use the web parsed webserver logs and write a function that attaches a geo-location to IP-address and a parse the user agent to make it more clear.
+
   - Update the program
   - A pass-by-value & benchmark
   - A pass-by-reference & benchmark
 
 ## 0x06 - Golang != OOP
+So far we have seen no classes, but we do have interfaces! Let's combine everything we've learned to build a website up-time monitoring tool using a design pattern.
+
 ### Theory
 - Inheritance vs Composition (no classes)
 - Interfaces
 - Packages & Program Structure
 
 ### Practice
-- Allow the user to provide data to populate structs with web crawler info
+Let's build an application that monitors the top 100 websites in the Netherlands, whether they are reachable and what their status code is. In order for the application to process the data let's use a "Observer Pattern" to:
+
+- Print the status to the console for debugging
+- Store the current state in a CSV file
+- etc
+
+## 0x07 - Concurrency!
+The crown jewel of Golang, let's speed up our website monitoring tool! 
+
+### Theory
+- Goroutines
+- Channels
+- Mutexes
+- Worker Pools
+- Packages & Program Structure
+
+### Practice
+Update the web monitoring program to work with a worker pool so we can visit all 100 websites a lot faster! (does a channel still work? Should it be mutext when writing CSV, etc)
+
+- Print the status to the console for debugging
+- Store the current state in a CSV file
+- etc
