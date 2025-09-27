@@ -76,7 +76,7 @@ Work with more advanced structures by reading and parsing webserver logs into da
 - Read log file from disk
 - Parse data into struct models
 
-## 0x05 - Core Computing Concepts
+## 0x05 - Computer Architecture
 
 ### Theory
 - Stack vs Heap
@@ -93,7 +93,7 @@ Work with more advanced structures by reading and parsing webserver logs into da
 No classes, but composition and interfaces. Applied to a website uptime monitoring tool.
 
 ### Theory
-- Inheritance vs Composition (no classes)
+- Inheritance v.s. Composition (no classes)
 - Interfaces
 - Packages & Program Structure
 
