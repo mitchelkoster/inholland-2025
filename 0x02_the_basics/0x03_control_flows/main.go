@@ -6,6 +6,11 @@ import (
 	"time"
 )
 
+// basic function
+func sumNumber2(a int, b int) int {
+	return a + b
+}
+
 func main() {
 	isTrue := true
 	isFalse := false
@@ -116,4 +121,33 @@ func main() {
 		defer fmt.Println(i)
 	}
 	fmt.Println("done")
+
+	var sumNumber1 = func(a int, b int) int {
+		return a + b
+	}
+	fmt.Println("Basic function: ", sumNumber1(1, 3))
+	fmt.Println("Basic function: ", sumNumber2(2, 7))
+
+	// fmt.Println("Basic function: ", sumNumber3(3, 10)) // not defined
+
+	// "go run ./main" will only compile main -> fail
+	// "go run ." will compile the "package", but no "go init ." -> fail
+	// "go run ./main ./functions"
+	fmt.Println("Basic function: ", SumNumber3(3, 10))
+
+	// Original search
+	name, age := FindUser("Mitchel")
+	fmt.Printf("Name: %s, age: %d\n", name, age)
+
+	// Named return search
+	name, age = FindUser2("Mitchel")
+	fmt.Printf("Name: %s, age: %d\n", name, age)
+
+	// Variadic function
+	FindUser3("Mitchel", "Elizabeth", "Esmée")
+
+	// Anonymous functions
+	func() {
+		fmt.Println("Anonymous function call")
+	}()
 }
