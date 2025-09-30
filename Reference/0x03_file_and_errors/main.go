@@ -1,3 +1,9 @@
+/*
+Show example of file handling.
+
+https://github.com/mitchelkoster/vacay-gaurdian/blob/main/utils/storage.go
+*/
+
 package main
 
 import (
