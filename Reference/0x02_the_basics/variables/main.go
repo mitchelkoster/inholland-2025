@@ -8,8 +8,11 @@ import "fmt"
 var globalMessage string = "Global message: initial"
 
 func main() {
-	var name string  // Declared, not initalized
-	name = "Mitchel" // Initialized
+	var name string      // Declared, not initalized
+	name = "🥊 Mitchel 🥊" // Initialized
+
+	// immutableString := "hello"
+	// immutableString[0] = 'H' BREAKS!
 
 	var age int = 36 // Declared and initialized
 
