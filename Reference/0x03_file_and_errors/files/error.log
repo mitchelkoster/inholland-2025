@@ -1,0 +1,14 @@
+[Tue Sep 30 02:40:03.001116 2025] [mpm_prefork:notice] [pid 8484] AH00163: Apache/2.4.18 (Ubuntu) OpenSSL/1.0.2g configured -- resuming normal operations
+[Tue Sep 30 02:40:03.001157 2025] [core:notice] [pid 8484] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Sep 30 05:54:35.359564 2025] [authz_core:error] [pid 30074] [client 23.185.120.115:52108] AH01630: client denied by server configuration: /var/www/mitchelkoster.nl/public_html/server-status
+[Tue Sep 30 05:55:34.370898 2025] [mpm_prefork:notice] [pid 8484] AH00171: Graceful restart requested, doing restart
+AH00112: Warning: DocumentRoot [/var/www/recipe_book/public_html] does not exist
+AH00112: Warning: DocumentRoot [/var/www/recipe_book/public_html] does not exist
+[Tue Sep 30 05:55:35.000736 2025] [mpm_prefork:notice] [pid 8484] AH00163: Apache/2.4.18 (Ubuntu) OpenSSL/1.0.2g configured -- resuming normal operations
+[Tue Sep 30 05:55:35.000766 2025] [core:notice] [pid 8484] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Sep 30 05:55:41.785921 2025] [mpm_prefork:notice] [pid 8484] AH00171: Graceful restart requested, doing restart
+AH00112: Warning: DocumentRoot [/var/www/recipe_book/public_html] does not exist
+AH00112: Warning: DocumentRoot [/var/www/recipe_book/public_html] does not exist
+[Tue Sep 30 05:55:42.000338 2025] [mpm_prefork:notice] [pid 8484] AH00163: Apache/2.4.18 (Ubuntu) OpenSSL/1.0.2g configured -- resuming normal operations
+[Tue Sep 30 05:55:42.000368 2025] [core:notice] [pid 8484] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Sep 30 08:26:42.754670 2025] [core:error] [pid 14232] [client 176.98.191.13:36200] AH00126: Invalid URI in request POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh HTTP/1.1
