@@ -1,3 +1,5 @@
+*.csv
+
 # Powerpoint lock files
 .~lock*
 
