@@ -1,9 +1,11 @@
-package monitor
+package observers
 
 import (
 	"encoding/csv"
 	"fmt"
 	"os"
+
+	"webmonitor.com/monitor"
 )
 
 type CSVObserver struct {
@@ -21,11 +23,16 @@ func NewCSVObserver(filename string) (*CSVObserver, error) {
 	return &CSVObserver{writer: w, file: f}, nil
 }
 
-func (c *CSVObserver) Update(r Result) {
-	c.writer.Write([]string{r.Domain, fmt.Sprintf("%d", r.Status)})
+func (c *CSVObserver) Update(r monitor.Result) {
+	if err := c.writer.Write([]string{r.Domain, fmt.Sprintf("%d", r.Status)}); err != nil {
+		fmt.Println("CSV write error:", err)
+	}
 }
 
 func (c *CSVObserver) Close() {
 	c.writer.Flush()
+	if err := c.writer.Error(); err != nil {
+		fmt.Println("CSV flush error:", err)
+	}
 	c.file.Close()
 }
